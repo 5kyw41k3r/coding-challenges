@@ -1,5 +1,11 @@
 import sys
 
+print("Welcome to this program")
+print("Enter any value any I will determine the data type")
+print("Use exit to exit the program at any point of time")
+
+
+
 def main():
   x = input("Enter something: ")
   if x == "exit":
