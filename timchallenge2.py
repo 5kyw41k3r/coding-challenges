@@ -3,11 +3,11 @@ import requests
 # function = "TIME_SERIES_DAILY"
 # symbol = "MSFT"
 # interval = false
-# apikey = "V99OXX7I53299L7A"
+# apikey = ""
 
 # https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min
 
-msft = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=V99OXX7I53299L7A")
+msft = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=")
 response = msft.json()
 # print(response)
 
@@ -18,19 +18,19 @@ print(f"${response['Time Series (Daily)']['2020-11-23']['4. close']}")
 
 # AAPL close price.(Apple)
 print("Apple Stocks price for 11/23/2020")
-appl = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=AAPL&apikey=V99OXX7I53299L7A")
+appl = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=AAPL&apikey=")
 response = appl.json()
 # print(response)
 print(f"${response['Time Series (Daily)']['2020-11-23']['4. close']}")
 
 # GOOGL close price(Google)
 print("Google stocks price for 11/23/2020")
-googl = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=GOOGL&apikey=V99OXX7I53299L7A")
+googl = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=GOOGL&apikey=")
 response = googl.json()
 print(f"${response['Time Series (Daily)']['2020-11-23']['4. close']}")
 # HPQ close price
 print("HP stocks price for 11/23/2020")
-hpq = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=HPQ&apikey=V99OXX7I53299L7A")
+hpq = requests.get("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=HPQ&apikey=")
 response = hpq.json()
 print(f"${response['Time Series (Daily)']['2020-11-23']['4. close']}")
 
