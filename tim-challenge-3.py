@@ -1,7 +1,7 @@
 import requests
 
 class PostHandeler:
-    def part_one(self): # Get the details for the first post in the DB
+    def part_one(): # Get the details for the first post in the DB
         r = requests.get("https://jsonplaceholder.typicode.com/posts/")
         response = r.json() # Parse the response as json
         first_post = response[0] # Returns the "0" index post
@@ -12,7 +12,7 @@ class PostHandeler:
             print(f"{detail}: {first_post[detail]}")
             print("----------------------")
     
-    def part_two(self): # Fetch all comments from the first post
+    def part_two(): # Fetch all comments from the first post
         r = requests.get("https://jsonplaceholder.typicode.com/posts/1/comments")
         response = r.json()
 
@@ -29,16 +29,16 @@ class PostHandeler:
                 print("--------------------------")
             index_value_comments += 1 # Increment the value to change comment index
     
-    def part_three(self): # creates a new post
+    def part_three(): # creates a new post
         payload = {'title':'@5kyw41k3r', 'body':'FOO', 'userId':1}
         r = requests.post("https://jsonplaceholder.typicode.com/posts/", data=payload)
         print(r.status_code)
-    def part_four(self): # Updates the body of first post
+    def part_four(): # Updates the body of first post
         payload = {'id':1, 'title':'I am the first post', 'body':'I am the first post', 'userId':1}
         r = requests.put("https://jsonplaceholder.typicode.com/posts/1/", data=payload)
         print(r.status_code)
     
-    def part_five(self): # Deletes the 10th post
+    def part_five(): # Deletes the 10th post
         r = requests.delete("https://jsonplaceholder.typicode.com/posts/10")
         print(r.status_code)
 
