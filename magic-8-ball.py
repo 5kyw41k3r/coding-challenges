@@ -22,7 +22,7 @@ def Replay(): # Asks user for replay...
     elif reply == 'N':
         exit()
     else:
-        print('I apologies, I did not catch that. Please repeat.')
+        print('My apologies, I did not catch that. Please repeat.')
         Replay()
 
 Magic8Ball()
